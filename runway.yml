@@ -1,0 +1,11 @@
+---
+deployments:
+  - name: eks-dev-cluster
+    modules:
+      - path: aws/infrastructure/k8s/configmaps.k8s
+    regions:
+      - us-west-2
+    env_vars:
+      KUBECONFIG: "${env HOME}/.kube/config-dev"
+    parameters:
+      region: ${env AWS_REGION}

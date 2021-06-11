@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations: {}
+  name: test-configmap
+  namespace: dev
+data:
