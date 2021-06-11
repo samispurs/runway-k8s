@@ -3,6 +3,9 @@ deployments:
   - name: eks-dev-cluster
     modules:
       - path: aws/infrastructure/k8s/configmaps.k8s
+      - tags: #Using example from https://docs.onica.com/projects/runway/en/release/runway_config.html#module.tags
+          - new_tag
+          - old_tag
     regions:
       - us-west-2
     env_vars:
